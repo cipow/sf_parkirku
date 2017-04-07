@@ -29,11 +29,10 @@ command diatas akan menjalankan penambahan data otomatis, jika tidak ingin
 menbambah data secara otomatis silahkan dilewati.
 
 > command diatas bisa disingkat menjadi
-```
-php artisan migrate --seed
-```
-yang akan menjalankan pembuatan table dan penambahan record secara otomatis
-
+>```
+>php artisan migrate --seed
+>```
+>yang akan menjalankan pembuatan table dan penambahan record secara otomatis
 
 
 kemudian untuk menjalankan aplikasi
