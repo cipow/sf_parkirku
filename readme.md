@@ -1,7 +1,12 @@
 # PARKIRKU LARAVEL Version 5.4
 
 ## cara menggunakan
-setting pada bagian `.env` terlebih dahulu
+copy `.env.example` menjadi `.env` terlebih dahulu, lalu jalankan script berikut pada folder project
+laravel dengan menggunakan terminal atau command prompt.
+```
+php artisan key:generate
+```
+kemudian setting pada bagian `.env`
 ```
 DB_CONNECTION=mysql  /// jenis database
 DB_HOST=127.0.0.1    /// host database
