@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="{{asset('assets/icon/favicon2.png')}}" sizes="16x16" type="image/png">
     <title>Admin PARKIRKU</title>
 
     <!-- CSS FILE -->

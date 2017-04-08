@@ -52,7 +52,7 @@
                       <label>Pesan</label>
                       <textarea rows="6" name="pesan" class="form-control" placeholder="Pesan">{{ old('pesan') }}</textarea>
                       @if ($errors->has('pesan'))
-                      <p><font size="2">Note : Pesan tidak boleh kosong</font></p>
+                      <p><font size="2">Note : Pesan tidak boleh kosong dan maks. 255 karakter</font></p>
                       @endif
                   </div>
               </div>

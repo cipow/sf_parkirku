@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="{{asset('assets/icon/favicon2.png')}}" sizes="16x16" type="image/png">
     <title>PARKIRKU</title>
     @include('homePage.style.css')
   </head>
@@ -19,6 +20,8 @@
                   Sebelum Memarkirkan Kendaraan
                 </font></p>
                 <a href="#check_kuota" class="btn btn-primary btn-xl page-scroll">Check Kuota Parkir</a>
+                <br><br>
+                <a href="#lapor" class="btn btn-success btn-xl page-scroll">Lapor !!!</a>
             </div>
         </div>
     </header>
