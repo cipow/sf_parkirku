@@ -69,31 +69,8 @@
           @foreach ($data as $data)
             <div class="col-md-4 portfolio-item">
               <h3>{{$data->judulLapor}}
-                <small>oleh {{$data->namaPelapor}}</small>
-              </h3>
-              <p>
-                {{$data->pesanLapor}}
-              </p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-              <h3>{{$data->judulLapor}}
-                <small>oleh {{$data->namaPelapor}}</small>
-              </h3>
-              <p>
-                {{$data->pesanLapor}}
-              </p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-              <h3>{{$data->judulLapor}}
-                <small>oleh {{$data->namaPelapor}}</small>
-              </h3>
-              <p>
-                {{$data->pesanLapor}}
-              </p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-              <h3>{{$data->judulLapor}}
-                <small>oleh {{$data->namaPelapor}}</small>
+                <small>oleh {{$data->namaPelapor}}</small><br>
+                <small><i>pada {{ date('l, d-m-Y',strtotime($data->created_at)) }} pukul {{ date('H:i',strtotime($data->created_at)) }} WIB</i></small>
               </h3>
               <p>
                 {{$data->pesanLapor}}
