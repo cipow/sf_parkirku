@@ -41,8 +41,8 @@ class homePageParkirku extends Controller
     $validator = Validator::make($request->all(),[
       'nama'  => 'required|max:30',
       'noHP'  => 'required|digits_between:11,13',
-      'judul' => 'required',
-      'pesan' => 'required',
+      'judul' => 'required|max:50',
+      'pesan' => 'required|max:255',
     ]);
 
     if($validator->fails()){
@@ -58,6 +58,11 @@ class homePageParkirku extends Controller
     $lapor->pesanLapor  = $request->pesan;
     $lapor->save();
     return redirect('/#lapor')->with('pesan','sukses');
+  }
+
+  public function daftarLapor(){
+    $lapor = Lapor::orderBy('created_at', 'desc')->get();
+    return view('homePage.daftarLapor', ['data' => $lapor]);
   }
 
   public function waktuJumatan(){

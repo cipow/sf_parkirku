@@ -18,7 +18,7 @@
                     <a class="page-scroll" href="#lapor">Lapor !!!</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#lapor">Daftar Lapor</a>
+                    <a class="page-scroll" href="{{ route('daftarLapor') }}">Daftar Lapor</a>
                 </li>
                 @if(!Auth::guest())
                 <li>

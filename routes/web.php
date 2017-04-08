@@ -13,6 +13,7 @@
 
 Route::get('/','homePageParkirku@index')->name('home');
 Route::post('/','homePageParkirku@laporkan')->name('lapor');
+Route::get('/lapor','homePageParkirku@daftarLapor')->name('daftarLapor');
 
 Auth::routes();
 Route::get('/admin','adminParkirku@index')->name('adminPanel');
