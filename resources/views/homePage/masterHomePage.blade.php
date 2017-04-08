@@ -34,13 +34,22 @@
       @include('homePage.konten.lapor')
     </section>
 
+    <a class="btn btn-danger" href="#" id="btn-scroll-up" style="display:none;position:fixed;bottom:25px;right:25px;">
+      <i class="glyphicon glyphicon-arrow-up"></i><br>
+    </a>
+
     @include('homePage.style.js')
+
     <script type="text/javascript">
-      windows.onload = function (){
-        var section = document.getElementById("check_kuota");
+    $(window).scroll(function (event) {
+      var scroll = $(window).scrollTop();
+      if (scroll < 300) {
+        $('#btn-scroll-up').css('display','none');
+      } else {
+        $('#btn-scroll-up').css('display','inline');
       }
-      setInterval(onload,1000);
-      setTimeout(onload,1);
+    });
     </script>
+
   </body>
 </html>

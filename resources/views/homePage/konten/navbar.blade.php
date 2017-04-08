@@ -18,12 +18,13 @@
                     <a class="page-scroll" href="#lapor">Lapor !!!</a>
                 </li>
                 <li>
-                  @if(Auth::guest())
-                    <a href="{{ route('login') }}">LOGIN</a>
-                  @else
-                    <a href="{{ route('adminPanel') }}">Admin</a>
-                  @endif
+                    <a class="page-scroll" href="#lapor">Daftar Lapor</a>
                 </li>
+                @if(!Auth::guest())
+                <li>
+                    <a href="{{ route('adminPanel') }}">Admin</a>
+                </li>
+                @endif
             </ul>
         </div>
     </div>
