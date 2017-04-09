@@ -81,6 +81,13 @@ class adminParkirku extends Controller
     return back();
   }
 
+  public function unOrPublish(Request $request, $id){
+    $publish = Lapor::findOrFail($id);
+    $publish->publish = $request->publish;
+    $publish->save();
+    return back();
+  }
+
   public function daftarKendaraan(){
       $data = [
         'active'  => 2,
@@ -138,4 +145,5 @@ class adminParkirku extends Controller
       return redirect()->route('adminPanel');
     }
   }
+
 }

@@ -39,10 +39,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Semua</a>
+                        <a href="{{ route('daftarLapor')}}">Proses</a>
                     </li>
                     <li>
-                        <a href="#">Selesai</a>
+                        <a href="{{ route('daftarLaporSemua')}}">Semua</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('daftarLaporSelesai')}}">Selesai</a>
                     </li>
                 </ul>
             </div>
@@ -55,29 +58,7 @@
     <div class="container">
 
         <!-- Page Header -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Lapor
-                    <small>Hari ini</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-          @foreach ($data as $data)
-            <div class="col-md-4 portfolio-item">
-              <h3>{{$data->judulLapor}}
-                <small>oleh {{$data->namaPelapor}}</small><br>
-                <small><i>pada {{ date('l, d-m-Y',strtotime($data->created_at)) }} pukul {{ date('H:i',strtotime($data->created_at)) }} WIB</i></small>
-              </h3>
-              <p>
-                {{$data->pesanLapor}}
-              </p>
-            </div>
-          @endforeach
-        </div>
+        @yield('content')
         <!-- /.row -->
 
         <hr>
@@ -86,7 +67,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; PARKIRKU 2017</p>
                 </div>
             </div>
         </footer>

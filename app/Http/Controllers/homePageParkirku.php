@@ -61,8 +61,23 @@ class homePageParkirku extends Controller
   }
 
   public function daftarLapor(){
-    $lapor = Lapor::orderBy('created_at', 'desc')->get();
-    return view('homePage.daftarLapor', ['data' => $lapor]);
+    $lapor = Lapor::orderBy('created_at', 'desc')
+            ->where('publish', 1)
+            ->get();
+    return view('homePage.konten.daftarLapor', ['data' => $lapor, 'text' => 'on progress']);
+  }
+
+  public function daftarLaporSemua(){
+    $lapor = Lapor::orderBy('created_at', 'desc')
+            ->get();
+    return view('homePage.konten.daftarLapor', ['data' => $lapor, 'text' => 'all progress']);
+  }
+
+  public function daftarLaporSelesai(){
+    $lapor = Lapor::orderBy('created_at', 'desc')
+            ->where('publish', 0)
+            ->get();
+    return view('homePage.konten.daftarLapor', ['data' => $lapor, 'text' => 'finished']);
   }
 
   public function waktuJumatan(){

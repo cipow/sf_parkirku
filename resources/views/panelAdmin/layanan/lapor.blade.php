@@ -38,7 +38,13 @@
                 <div class="widget-box transparent">
                   <div class="widget-header widget-header-small">
                     <h4 class="widget-title smaller">
-                      <span class="blue"><b>{{ $data->judulLapor }}</b></span>
+                      <span class="blue"><b>{{ $data->judulLapor }}</b>
+                        @if ($data->publish == 1)
+                        <small>(published)</small>
+                        @else
+                        <small>(unpublish)</small>
+                        @endif
+                      </span>
                     </h4>
 
                     <span class="widget-toolbar no-border">
@@ -58,7 +64,19 @@
                     </div>
                     <div class="widget-toolbox clearfix">
                       <div class="pull-right action-buttons">
-                        <span class="red">Hubungi : <b>{{ $data->noHP }}</b></span>
+                        <span class="red">Hubungi : <b>{{ $data->noHP }}</b><br>
+                          <form action="{{ route('swapPublish', $data->id) }}" method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('PUT') }}
+                            @if ($data->publish == 1)
+                            <input type="hidden" name="publish" value="0">
+                            <input class="btn btn-minier btn-danger" type="submit" name="send" value="UN PUBLISH">
+                            @else
+                            <input type="hidden" name="publish" value="1">
+                            <input class="btn btn-minier btn-success" type="submit" name="send" value="PUBLISH">
+                            @endif
+                          </form>
+                        </span>
                       </div>
                     </div>
                   </div>
