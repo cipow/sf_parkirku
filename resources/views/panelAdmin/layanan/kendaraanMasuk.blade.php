@@ -131,7 +131,9 @@
               <div class="col-sm-9">
                 <select class="col-xs-10 col-sm-5" name="tipe">
                   <option value="MOTOR">MOTOR</option>
-                  <option value="MOBIL">MOBIL</option>
+                  @if ($sisa['mobilG'] > 0)
+                    <option value="MOBIL">MOBIL</option>
+                  @endif
                 </select>
               </div>
             </div>
@@ -140,10 +142,17 @@
               <label class="col-sm-3 control-label no-padding-right">  </label>
               <input type="hidden" name="gedung" value="G">
               <div class="col-sm-9">
+                @if ($sisa['motorG'] > 0)
                 <button class="btn btn-info" type="submit">
                   <i class="ace-icon fa fa-check bigger-110"></i>
                   Submit
                 </button>
+                @else
+                <button class="btn disabled btn-info" type="submit">
+                  <i class="ace-icon fa fa-check bigger-110"></i>
+                  Submit
+                </button>
+                @endif
               </div>
             </div>
           </form>
@@ -193,10 +202,17 @@
               <label class="col-sm-3 control-label no-padding-right">  </label>
               <input type="hidden" name="gedung" value="H">
               <div class="col-sm-9">
+                @if ($sisa['motorH'] > 0)
                 <button class="btn btn-info" type="submit">
                   <i class="ace-icon fa fa-check bigger-110"></i>
                   Submit
                 </button>
+                @else
+                <button class="btn disabled btn-info" type="submit">
+                  <i class="ace-icon fa fa-check bigger-110"></i>
+                  Submit
+                </button>
+                @endif
               </div>
             </div>
           </form>
@@ -238,7 +254,9 @@
               <div class="col-sm-9">
                 <select class="col-xs-10 col-sm-5" name="tipe">
                   <option value="MOTOR">MOTOR</option>
-                  <option value="MOBIL">MOBIL</option>
+                  @if ($sisa['mobilE'] > 0)
+                    <option value="MOBIL">MOBIL</option>
+                  @endif
                 </select>
               </div>
             </div>
@@ -247,10 +265,17 @@
               <label class="col-sm-3 control-label no-padding-right">  </label>
               <input type="hidden" name="gedung" value="E">
               <div class="col-sm-9">
+                @if ($sisa['motorE'] > 0)
                 <button class="btn btn-info" type="submit">
                   <i class="ace-icon fa fa-check bigger-110"></i>
                   Submit
                 </button>
+                @else
+                <button class="btn disabled btn-info" type="submit">
+                  <i class="ace-icon fa fa-check bigger-110"></i>
+                  Submit
+                </button>
+                @endif
               </div>
             </div>
           </form>
@@ -300,10 +325,17 @@
               <label class="col-sm-3 control-label no-padding-right">  </label>
               <input type="hidden" name="gedung" value="D">
               <div class="col-sm-9">
+                @if ($sisa['motorD'] > 0)
                 <button class="btn btn-info" type="submit">
                   <i class="ace-icon fa fa-check bigger-110"></i>
                   Submit
                 </button>
+                @else
+                <button class="btn disabled btn-info" type="submit">
+                  <i class="ace-icon fa fa-check bigger-110"></i>
+                  Submit
+                </button>
+                @endif
               </div>
             </div>
           </form>
@@ -345,7 +377,9 @@
               <div class="col-sm-9">
                 <select class="col-xs-10 col-sm-5" name="tipe">
                   <option value="MOTOR">MOTOR</option>
-                  <option value="MOBIL">MOBIL</option>
+                  @if ($sisa['mobilC'] > 0)
+                    <option value="MOBIL">MOBIL</option>
+                  @endif
                 </select>
               </div>
             </div>
@@ -354,10 +388,17 @@
               <label class="col-sm-3 control-label no-padding-right">  </label>
               <input type="hidden" name="gedung" value="C">
               <div class="col-sm-9">
+                @if ($sisa['motorC'] > 0)
                 <button class="btn btn-info" type="submit">
                   <i class="ace-icon fa fa-check bigger-110"></i>
                   Submit
                 </button>
+                @else
+                <button class="btn disabled btn-info" type="submit">
+                  <i class="ace-icon fa fa-check bigger-110"></i>
+                  Submit
+                </button>
+                @endif
               </div>
             </div>
           </form>
@@ -407,10 +448,17 @@
               <label class="col-sm-3 control-label no-padding-right">  </label>
               <input type="hidden" name="gedung" value="LB">
               <div class="col-sm-9">
+                @if ($sisa['LB'] > 0)
                 <button class="btn btn-info" type="submit">
                   <i class="ace-icon fa fa-check bigger-110"></i>
                   Submit
                 </button>
+                @else
+                <button class="btn disabled btn-info" type="submit">
+                  <i class="ace-icon fa fa-check bigger-110"></i>
+                  Submit
+                </button>
+                @endif
               </div>
             </div>
           </form>
