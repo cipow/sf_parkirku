@@ -26,5 +26,6 @@ Route::put('/admin/edit/{id}','adminParkirku@editKendaraan')->name('edit');
 Route::get('/admin/daftar/parkir','adminParkirku@daftarKendaraan')->name('adminListParkir');
 Route::get('/admin/daftar/lapor','adminParkirku@daftarLapor')->name('adminLapor');
 Route::put('/admin/daftar/lapor/publish/{id}','adminParkirku@unOrPublish')->name('swapPublish');
+Route::delete('/admin/daftar/lapor/delete/{id}','adminParkirku@hapusLapor')->name('hapusLapor');
 Route::get('/admin/panduan','adminParkirku@panduanPARKIRKU')->name('panduan');
 Route::get('/admin/user/add','adminParkirku@addUserPARKIRKU')->name('addUser');

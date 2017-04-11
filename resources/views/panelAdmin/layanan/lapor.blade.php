@@ -70,11 +70,26 @@
                             {{ method_field('PUT') }}
                             @if ($data->publish == 1)
                             <input type="hidden" name="publish" value="0">
-                            <input class="btn btn-minier btn-danger" type="submit" name="send" value="UN PUBLISH">
+                            <input class="btn btn-minier btn-warning" type="submit" name="send" value="UN PUBLISH">
                             @else
                             <input type="hidden" name="publish" value="1">
                             <input class="btn btn-minier btn-success" type="submit" name="send" value="PUBLISH">
                             @endif
+
+                            <a href="{{ route('hapusLapor', $data->id) }}" class="btn btn-minier btn-danger"
+                                onclick="if(confirm('Anda Yakin ?')){
+                                            event.preventDefault();
+                                            document.getElementById('hapus{{$data->id}}').submit();
+                                          }">
+                                         <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                         HAPUS
+                            </a>
+                          </form>
+
+                          <form id="hapus{{$data->id}}" action="{{ route('hapusLapor', $data->id) }}"
+                            method="post" style="display: none;">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
                           </form>
                         </span>
                       </div>

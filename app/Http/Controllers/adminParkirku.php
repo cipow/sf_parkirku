@@ -88,6 +88,12 @@ class adminParkirku extends Controller
     return back();
   }
 
+  public function hapusLapor($id){
+    $lapor = Lapor::findOrFail($id);
+    $lapor->delete();
+    return back();
+  }
+
   public function daftarKendaraan(){
       $data = [
         'active'  => 2,

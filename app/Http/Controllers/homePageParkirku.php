@@ -41,8 +41,8 @@ class homePageParkirku extends Controller
     $validator = Validator::make($request->all(),[
       'nama'  => 'required|max:30',
       'noHP'  => 'required|digits_between:11,13',
-      'judul' => 'required|max:50',
-      'pesan' => 'required|max:255',
+      'judul' => 'required|min:15|max:50',
+      'pesan' => 'required|min:30|max:255',
     ]);
 
     if($validator->fails()){
