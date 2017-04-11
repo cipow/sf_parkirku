@@ -30,7 +30,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" src="{{asset('assets/icon/favicon2.png')}}">
+                <a href="{{ route('home') }}">
+                  <img class="navbar-brand" src="{{asset('assets/icon/favicon2.png')}}">
+                </a>
                 <div class="navbar-brand" style="color:white;">
                   Daftar Lapor
                 </div>
@@ -46,6 +48,9 @@
                     </li>
                     <li>
                         <a href="{{ route('daftarLaporSelesai')}}">Selesai</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('home')}}">Back To Home</a>
                     </li>
                 </ul>
             </div>
